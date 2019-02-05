@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UUu-bs-XI3">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculator View Controller-->
+        <scene sceneID="HBe-0A-7dz">
+            <objects>
+                <viewController id="UUu-bs-XI3" customClass="CalculatorViewController" customModule="Swift_Calculator2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cnD-ad-8Px"/>
+                        <viewControllerLayoutGuide type="bottom" id="yRb-1H-q4K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aVl-5a-v4L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HmO-wH-kaD">
+                                <rect key="frame" x="15" y="40" width="290" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dp7-Pr-HlK">
+                                <rect key="frame" x="15" y="69" width="290" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="B51-iL-Zsc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSX-SS-zDL">
+                                <rect key="frame" x="15" y="408" width="290" height="60"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hfk-Dy-Ucc"/>
+                                </constraints>
+                                <state key="normal" title="calc">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapedCalculateButtonHandler:" destination="UUu-bs-XI3" eventType="touchUpInside" id="HEG-90-ohh"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUk-pq-dJE">
+                                <rect key="frame" x="10" y="144" width="300" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4q-q5-zeq">
+                                        <rect key="frame" x="0.0" y="60" width="100" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Nm4-O8-wg1"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapedNumberButtonsHandler:" destination="UUu-bs-XI3" eventType="touchUpInside" id="IOr-0b-KSm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r57-Ea-IGn">
+                                        <rect key="frame" x="200" y="0.0" width="100" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapedNumberButtonsHandler:" destination="UUu-bs-XI3" eventType="touchUpInside" id="wTS-cs-T0L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mse-or-ZPx">
+                                        <rect key="frame" x="200" y="180" width="100" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="C">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapedNumberButtonsHandler:" destination="UUu-bs-XI3" eventType="touchUpInside" id="bkb-rN-8ts"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bk-hg-nPJ">
+                                        <rect key="frame" x="200" y="120" width="100" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapedNumberButtonsHandler:" destination="UUu-bs-XI3" eventType="touchUpInside" id="M4z-vj-USl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oje-zp-HGO">
+                                        <rect key="frame" x="100" y="60" width="100" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapedNumberButtonsHandler:" destination="UUu-bs-XI3" eventType="touchUpInside" id="MhU-Pz-qsw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xob-TY-pkA">
+                                        <rect key="frame" x="100" y="180" width="100" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="00">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapedNumberButtonsHandler:" destination="UUu-bs-XI3" eventType="touchUpInside" id="o4W-Ks-Lb7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zh-78-IZx">
+                                        <rect key="frame" x="200" y="60" width="100" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapedNumberButtonsHandler:" destination="UUu-bs-XI3" eventType="touchUpInside" id="jC1-eW-IZH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXm-pJ-4Xr">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="bbG-0e-buy"/>
+                                            <constraint firstAttribute="width" constant="100" id="eKb-2z-xM3"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapedNumberButtonsHandler:" destination="UUu-bs-XI3" eventType="touchUpInside" id="ccL-Ce-oCl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtT-dh-Irb">
+                                        <rect key="frame" x="0.0" y="120" width="100" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="OdB-Ha-nQ7"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapedNumberButtonsHandler:" destination="UUu-bs-XI3" eventType="touchUpInside" id="rRv-ka-GKb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-ji-AGC">
+                                        <rect key="frame" x="100" y="0.0" width="100" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapedNumberButtonsHandler:" destination="UUu-bs-XI3" eventType="touchUpInside" id="B4q-f2-9gu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBd-8y-naX">
+                                        <rect key="frame" x="0.0" y="180" width="100" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapedNumberButtonsHandler:" destination="UUu-bs-XI3" eventType="touchUpInside" id="5oT-Iv-Soj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqg-J4-PMR">
+                                        <rect key="frame" x="100" y="120" width="100" height="60"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapedNumberButtonsHandler:" destination="UUu-bs-XI3" eventType="touchUpInside" id="wrm-qf-AIm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="IBd-8y-naX" firstAttribute="top" secondItem="xob-TY-pkA" secondAttribute="top" id="03Q-3T-8HF"/>
+                                    <constraint firstItem="r57-Ea-IGn" firstAttribute="leading" secondItem="9zh-78-IZx" secondAttribute="leading" id="08N-ei-Oli"/>
+                                    <constraint firstItem="ibm-ji-AGC" firstAttribute="baseline" secondItem="r57-Ea-IGn" secondAttribute="firstBaseline" id="3Jd-Ac-AsE"/>
+                                    <constraint firstItem="Vqg-J4-PMR" firstAttribute="leading" secondItem="xob-TY-pkA" secondAttribute="leading" id="3XW-Jw-8ed"/>
+                                    <constraint firstItem="ibm-ji-AGC" firstAttribute="trailing" secondItem="Oje-zp-HGO" secondAttribute="trailing" id="8Ok-2H-NSw"/>
+                                    <constraint firstItem="r57-Ea-IGn" firstAttribute="trailing" secondItem="9zh-78-IZx" secondAttribute="trailing" id="A7S-LR-lbl"/>
+                                    <constraint firstItem="Oje-zp-HGO" firstAttribute="top" secondItem="9zh-78-IZx" secondAttribute="top" id="AO1-n0-MXR"/>
+                                    <constraint firstItem="Vqg-J4-PMR" firstAttribute="trailing" secondItem="xob-TY-pkA" secondAttribute="trailing" id="CcQ-9N-RzW"/>
+                                    <constraint firstItem="BXm-pJ-4Xr" firstAttribute="leading" secondItem="GUk-pq-dJE" secondAttribute="leading" id="CeZ-Qm-vxB"/>
+                                    <constraint firstAttribute="trailing" secondItem="r57-Ea-IGn" secondAttribute="trailing" id="FTu-ni-Mgg"/>
+                                    <constraint firstItem="BXm-pJ-4Xr" firstAttribute="top" secondItem="GUk-pq-dJE" secondAttribute="top" id="FWz-ng-5fy"/>
+                                    <constraint firstItem="Oje-zp-HGO" firstAttribute="leading" secondItem="Vqg-J4-PMR" secondAttribute="leading" id="Gup-fZ-wiS"/>
+                                    <constraint firstItem="ibm-ji-AGC" firstAttribute="leading" secondItem="BXm-pJ-4Xr" secondAttribute="trailing" id="OcQ-ih-u8l"/>
+                                    <constraint firstItem="BXm-pJ-4Xr" firstAttribute="trailing" secondItem="p4q-q5-zeq" secondAttribute="trailing" id="Pbt-qW-lYR"/>
+                                    <constraint firstItem="8bk-hg-nPJ" firstAttribute="trailing" secondItem="Mse-or-ZPx" secondAttribute="trailing" id="QBv-h5-8k0"/>
+                                    <constraint firstItem="r57-Ea-IGn" firstAttribute="leading" secondItem="ibm-ji-AGC" secondAttribute="trailing" id="TPo-9D-57h"/>
+                                    <constraint firstItem="p4q-q5-zeq" firstAttribute="baseline" secondItem="Oje-zp-HGO" secondAttribute="firstBaseline" id="TtP-D5-9Ny"/>
+                                    <constraint firstItem="9zh-78-IZx" firstAttribute="leading" secondItem="8bk-hg-nPJ" secondAttribute="leading" id="YJV-5l-lDV"/>
+                                    <constraint firstItem="ibm-ji-AGC" firstAttribute="top" secondItem="r57-Ea-IGn" secondAttribute="top" id="b2A-vh-OaS"/>
+                                    <constraint firstItem="p4q-q5-zeq" firstAttribute="top" secondItem="BXm-pJ-4Xr" secondAttribute="bottom" id="b4p-6E-LoU"/>
+                                    <constraint firstItem="p4q-q5-zeq" firstAttribute="top" secondItem="Oje-zp-HGO" secondAttribute="top" id="bZb-SQ-W0i"/>
+                                    <constraint firstItem="DtT-dh-Irb" firstAttribute="baseline" secondItem="Vqg-J4-PMR" secondAttribute="firstBaseline" id="bfO-iw-bbL"/>
+                                    <constraint firstItem="BXm-pJ-4Xr" firstAttribute="top" secondItem="ibm-ji-AGC" secondAttribute="top" id="cDr-6o-wiS"/>
+                                    <constraint firstItem="Oje-zp-HGO" firstAttribute="baseline" secondItem="9zh-78-IZx" secondAttribute="firstBaseline" id="cx9-iy-zz0"/>
+                                    <constraint firstItem="xob-TY-pkA" firstAttribute="top" secondItem="Mse-or-ZPx" secondAttribute="top" id="e2E-Sp-JB1"/>
+                                    <constraint firstItem="DtT-dh-Irb" firstAttribute="top" secondItem="Vqg-J4-PMR" secondAttribute="top" id="e2d-Xj-EgU"/>
+                                    <constraint firstItem="Vqg-J4-PMR" firstAttribute="baseline" secondItem="8bk-hg-nPJ" secondAttribute="firstBaseline" id="iMa-y9-AEs"/>
+                                    <constraint firstItem="ibm-ji-AGC" firstAttribute="leading" secondItem="Oje-zp-HGO" secondAttribute="leading" id="iQH-zN-h59"/>
+                                    <constraint firstItem="DtT-dh-Irb" firstAttribute="leading" secondItem="IBd-8y-naX" secondAttribute="leading" id="jLa-OR-Wh1"/>
+                                    <constraint firstItem="BXm-pJ-4Xr" firstAttribute="baseline" secondItem="ibm-ji-AGC" secondAttribute="firstBaseline" id="jZB-ue-q04"/>
+                                    <constraint firstItem="IBd-8y-naX" firstAttribute="baseline" secondItem="xob-TY-pkA" secondAttribute="firstBaseline" id="l6b-NY-S04"/>
+                                    <constraint firstItem="xob-TY-pkA" firstAttribute="baseline" secondItem="Mse-or-ZPx" secondAttribute="firstBaseline" id="mJS-TL-80B"/>
+                                    <constraint firstItem="BXm-pJ-4Xr" firstAttribute="leading" secondItem="p4q-q5-zeq" secondAttribute="leading" id="mXw-iA-liK"/>
+                                    <constraint firstItem="DtT-dh-Irb" firstAttribute="top" secondItem="p4q-q5-zeq" secondAttribute="bottom" id="nFg-Zs-nr8"/>
+                                    <constraint firstItem="Oje-zp-HGO" firstAttribute="trailing" secondItem="Vqg-J4-PMR" secondAttribute="trailing" id="nsa-Lc-aiq"/>
+                                    <constraint firstItem="9zh-78-IZx" firstAttribute="trailing" secondItem="8bk-hg-nPJ" secondAttribute="trailing" id="ouS-ry-Iss"/>
+                                    <constraint firstItem="p4q-q5-zeq" firstAttribute="trailing" secondItem="DtT-dh-Irb" secondAttribute="trailing" id="oug-D0-icu"/>
+                                    <constraint firstItem="p4q-q5-zeq" firstAttribute="leading" secondItem="DtT-dh-Irb" secondAttribute="leading" id="pkg-9u-kYf"/>
+                                    <constraint firstItem="ibm-ji-AGC" firstAttribute="centerX" secondItem="GUk-pq-dJE" secondAttribute="centerX" id="qlM-cd-gkm"/>
+                                    <constraint firstItem="Vqg-J4-PMR" firstAttribute="top" secondItem="8bk-hg-nPJ" secondAttribute="top" id="r40-Rm-pPk"/>
+                                    <constraint firstItem="8bk-hg-nPJ" firstAttribute="leading" secondItem="Mse-or-ZPx" secondAttribute="leading" id="ttv-ZF-F0Q"/>
+                                    <constraint firstItem="DtT-dh-Irb" firstAttribute="trailing" secondItem="IBd-8y-naX" secondAttribute="trailing" id="uKc-Zn-ruq"/>
+                                    <constraint firstAttribute="height" constant="240" id="uMZ-Uv-vxG"/>
+                                    <constraint firstItem="IBd-8y-naX" firstAttribute="top" secondItem="DtT-dh-Irb" secondAttribute="bottom" id="wZh-EG-kHY"/>
+                                    <constraint firstAttribute="bottom" secondItem="IBd-8y-naX" secondAttribute="bottom" id="zca-X2-2BV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HmO-wH-kaD" firstAttribute="top" secondItem="cnD-ad-8Px" secondAttribute="bottom" constant="20" id="22D-tK-mzg"/>
+                            <constraint firstItem="dp7-Pr-HlK" firstAttribute="centerX" secondItem="GUk-pq-dJE" secondAttribute="centerX" id="9zY-97-sUc"/>
+                            <constraint firstItem="HmO-wH-kaD" firstAttribute="trailing" secondItem="dp7-Pr-HlK" secondAttribute="trailing" id="Ae9-wE-C1F"/>
+                            <constraint firstItem="dp7-Pr-HlK" firstAttribute="leading" secondItem="YSX-SS-zDL" secondAttribute="leading" id="OGd-nD-dB1"/>
+                            <constraint firstItem="dp7-Pr-HlK" firstAttribute="top" secondItem="HmO-wH-kaD" secondAttribute="bottom" constant="8" symbolic="YES" id="Wcu-CI-3Ft"/>
+                            <constraint firstItem="HmO-wH-kaD" firstAttribute="centerX" secondItem="aVl-5a-v4L" secondAttribute="centerX" id="ahD-WN-x0Q"/>
+                            <constraint firstItem="HmO-wH-kaD" firstAttribute="leading" secondItem="dp7-Pr-HlK" secondAttribute="leading" id="deO-gQ-dQa"/>
+                            <constraint firstItem="GUk-pq-dJE" firstAttribute="leading" secondItem="aVl-5a-v4L" secondAttribute="leadingMargin" constant="-6" id="hVM-oh-8Mu"/>
+                            <constraint firstItem="GUk-pq-dJE" firstAttribute="top" secondItem="dp7-Pr-HlK" secondAttribute="bottom" constant="45" id="lks-Fz-dCq"/>
+                            <constraint firstItem="dp7-Pr-HlK" firstAttribute="trailing" secondItem="YSX-SS-zDL" secondAttribute="trailing" id="o3U-Bb-ZkA"/>
+                            <constraint firstItem="YSX-SS-zDL" firstAttribute="top" secondItem="GUk-pq-dJE" secondAttribute="bottom" constant="24" id="qFz-Gk-1lQ"/>
+                            <constraint firstItem="HmO-wH-kaD" firstAttribute="leading" secondItem="aVl-5a-v4L" secondAttribute="leadingMargin" constant="-1" id="zMl-4S-STS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="baseView" destination="GUk-pq-dJE" id="9Ki-qG-ElQ"/>
+                        <outlet property="calculateButton" destination="YSX-SS-zDL" id="Job-1j-lht"/>
+                        <outlet property="descriptionLabel" destination="HmO-wH-kaD" id="kyJ-dm-Bpc"/>
+                        <outlet property="outputTextField" destination="dp7-Pr-HlK" id="QT3-eA-efs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ple-Mv-bSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.28125" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
