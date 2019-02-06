@@ -18,12 +18,17 @@ class CalculatorViewController: UIViewController {
         self.setupViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupDefaultValue()
+    }
+    
     private func setupViews() {
         guard let kind = self.kind else { return }
         self.descriptionLabel.text = kind.viewParams.descriptionLabelText
         self.baseView.isHidden = kind.viewParams.allButtonHidden
         self.calculateButton.setTitle(kind.viewParams.buttonTitle, for: .normal)
-        self.setupDefaultValue()
+        self.navigationItem.title = kind.viewParams.navigationTitle
     }
     
     private func setupDefaultValue() {
@@ -99,6 +104,7 @@ enum InputType {
     struct  ViewParams {
         let descriptionLabelText: String
         let buttonTitle: String
+        let navigationTitle: String
         let zeroZeroButtonHidden: Bool
         let allButtonHidden: Bool
     }
@@ -109,18 +115,21 @@ enum InputType {
             return ViewParams(
                 descriptionLabelText: "金額を入力して下さい",
                 buttonTitle: "割引％を入力する",
+                navigationTitle: "Price",
                 zeroZeroButtonHidden: false,
                 allButtonHidden: false)
         case .percent:
             return ViewParams(
                 descriptionLabelText: "割引%を入力して下さい",
                 buttonTitle: "計算する",
+                navigationTitle: "Percent",
                 zeroZeroButtonHidden: true,
                 allButtonHidden: false)
         case .result:
             return ViewParams(
                 descriptionLabelText: "計算結果",
                 buttonTitle: "他の計算をする",
+                navigationTitle: "Result",
                 zeroZeroButtonHidden: true,
                 allButtonHidden: true)
         }
